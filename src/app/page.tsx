@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { ArrowRight, Check, Store } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { WhatsappButton } from "@/components/WhatsappButton";
 import { FeatureItem } from "@/components/FeatureItem";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { CasosSucesso } from "@/components/sections/CasosSucesso";
+import { WhatsappChatDemo } from "@/components/WhatsappChatDemo";
 import { pilares, diferenciais } from "@/data/recursos";
 import { whatsappMessages } from "@/lib/whatsapp";
 import { site } from "@/lib/site";
@@ -50,33 +51,12 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="rounded-2xl bg-brand-gradient p-1 shadow-brand">
-              <div className="rounded-[14px] bg-white p-6 md:p-8">
-                <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand">
-                    <Store className="h-6 w-6" aria-hidden="true" />
-                  </span>
-                  <div>
-                    <p className="font-semibold text-slate-800">Vitrine da sua loja</p>
-                    <p className="text-sm text-slate-500">Online em poucos dias</p>
-                  </div>
-                </div>
-                <dl className="mt-6 grid grid-cols-2 gap-4">
-                  <div className="rounded-xl bg-bg-soft p-4">
-                    <dt className="text-sm text-slate-500">Pedidos hoje</dt>
-                    <dd className="mt-1 font-display text-2xl font-bold text-slate-900">+18</dd>
-                  </div>
-                  <div className="rounded-xl bg-bg-soft p-4">
-                    <dt className="text-sm text-slate-500">Visitas</dt>
-                    <dd className="mt-1 font-display text-2xl font-bold text-slate-900">312</dd>
-                  </div>
-                  <div className="col-span-2 rounded-xl bg-brand p-4 text-white">
-                    <dt className="text-sm text-blue-100">Atendimento WhatsApp</dt>
-                    <dd className="mt-1 font-semibold">Respondendo automaticamente</dd>
-                  </div>
-                </dl>
-              </div>
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="w-full max-w-[300px]">
+              <p className="mb-3 text-center text-sm font-medium text-slate-500">
+                Experimente o chatbot
+              </p>
+              <WhatsappChatDemo variant="compact" />
             </div>
           </div>
         </div>

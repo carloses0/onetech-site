@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { WhatsappButton } from "@/components/WhatsappButton";
 import { CtaSection } from "@/components/sections/CtaSection";
+import { WhatsappDemoSection } from "@/components/sections/WhatsappDemoSection";
 import { pilares, publicoAlvo } from "@/data/recursos";
 import { whatsappMessages } from "@/lib/whatsapp";
 import { site } from "@/lib/site";
@@ -124,6 +125,8 @@ export default function VitrineProPage() {
           })}
         </div>
       </Section>
+
+      <WhatsappDemoSection />
 
       <Section ariaLabelledby="comparativo-title">
         <div className="mx-auto max-w-2xl text-center">

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Check, Wrench } from "lucide-react";
 import { Section } from "@/components/ui/Section";
-import { Badge } from "@/components/ui/Badge";
 import { PlanCard } from "@/components/PlanCard";
 import { WhatsappButton } from "@/components/WhatsappButton";
 import { CtaSection } from "@/components/sections/CtaSection";
