@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" width="320" height="120">
+  <defs>
+    <linearGradient id="oneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00AEEF"/>
+      <stop offset="100%" stop-color="#0054A6"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0054A6" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00AEEF"/>
+      <stop offset="100%" stop-color="#0054A6" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="34" fill="none" stroke="#1A1A1B" stroke-width="10"/>
+  <path d="M26 60 A34 34 0 0 1 94 60" fill="none" stroke="url(#oneGrad)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M26 60 A34 34 0 0 0 94 60" fill="none" stroke="url(#oneGrad)" stroke-width="5" stroke-linecap="round"/>
+  <text x="120" y="58" font-family="Poppins, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="3">
+    <tspan fill="url(#oneGrad)">ONE</tspan><tspan fill="#1A1A1B">TECH</tspan>
+  </text>
+  <line x1="120" y1="78" x2="155" y2="78" stroke="url(#lineGrad)" stroke-width="2"/>
+  <text x="160" y="82" font-family="Poppins, Arial, sans-serif" font-size="13" font-weight="500" letter-spacing="6" fill="#1A1A1B">SOLUTIONS</text>
+  <line x1="268" y1="78" x2="303" y2="78" stroke="url(#lineGrad)" stroke-width="2"/>
+</svg>

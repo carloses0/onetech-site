@@ -1,0 +1,35 @@
+---
+description: Aderencia obrigatoria ao Design System da OneTech (cores, tipografia, componentes) em arquivos de UI
+globs: **/*.{tsx,jsx,css}
+alwaysApply: false
+---
+
+# Aderência ao Design System — OneTech
+
+Toda UI deve seguir o `DESIGN_SYSTEM.md` na raiz do projeto. Não invente cores, tamanhos ou estilos fora dos tokens.
+
+## Cores (use tokens Tailwind, nunca hex solto)
+- Primária da marca: `brand` (`#0054A6`), gradiente `#00AEEF` → `#0054A6`, hover `brand-600`.
+- Títulos/texto: `slate-700`/`slate-500`; fundos: branco e `bg-soft` (`#F7F8FA`).
+- WhatsApp: token `whatsapp` (`#22C55E`) apenas em botões/ícones de WhatsApp.
+
+```tsx
+// BAD: cor hex solta
+<button className="bg-[#0054A6] text-white">Contratar</button>
+
+// GOOD: token do design system
+<Button variant="primary">Contratar</Button>
+```
+
+## Tipografia
+- Títulos com a fonte display (Poppins) via `next/font`; corpo com Inter.
+- Respeite a escala (`display`, `h1`..`h3`, `body`, `small`); rótulos/overline em `uppercase tracking-wide`.
+
+## Componentes
+- Sempre reutilize os componentes-base; não recrie botões/cards inline.
+- `PlanCard` do plano "Profissional" usa a variante de destaque com badge "mais vendido".
+
+## Forma e espaçamento
+- Cantos `rounded-xl`/`rounded-2xl`, sombras `soft`/`card`/`brand`.
+- Seções com `py-16 md:py-24`, dentro de `Container` (`max-w-7xl`).
+- Layout minimalista com bastante respiro; mobile-first.

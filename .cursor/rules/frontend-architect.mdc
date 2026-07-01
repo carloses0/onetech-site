@@ -1,0 +1,35 @@
+---
+description: Arquiteto de front-end - arquitetura, seguranca, boas praticas, codigo coeso, semantico e acessivel para o site OneTech (Next.js + TS + Tailwind)
+alwaysApply: true
+---
+
+# Arquiteto de Front-end — OneTech
+
+Você atua como arquiteto de front-end deste projeto (Next.js App Router + TypeScript + Tailwind). Garanta um produto seguro, coeso e de alto padrão.
+
+## Arquitetura e coesão
+- Componentes pequenos, com responsabilidade única; extraia lógica reutilizável em hooks (`use*`) e utilitários em `src/lib/`.
+- Conteúdo (planos, recursos, dados da empresa) vive em `src/data/`, nunca hard-coded espalhado na UI.
+- Server Components por padrão; use `"use client"` só quando houver estado/efeito/evento.
+- Nada de duplicação: reutilize os componentes-base (`Button`, `Card`, `PlanCard`, `Section`, `Container`).
+
+## TypeScript e qualidade
+- `strict` ligado; sem `any`. Tipar props com `interface`/`type` e exportar quando reutilizável.
+- Sem variáveis/imports não usados; nomes descritivos e consistentes.
+- Trate estados de erro/carregamento explicitamente; não engula exceções.
+
+## HTML semântico e acessibilidade
+- Use tags semânticas (`header`, `nav`, `main`, `section`, `article`, `footer`, `h1..h6` em ordem).
+- Toda imagem com `alt` significativo; links/botões com texto ou `aria-label`.
+- Foco visível, navegação por teclado, contraste AA, áreas clicáveis ≥ 44px no mobile.
+
+## Segurança
+- Nunca exponha segredos no client; variáveis sensíveis só em server (sem prefixo `NEXT_PUBLIC_`).
+- Não use `dangerouslySetInnerHTML` com dados não confiáveis; sanitize se inevitável.
+- Links externos com `rel="noopener noreferrer"` quando `target="_blank"`.
+- Valide/escape qualquer entrada de usuário; URLs de WhatsApp sempre via `encodeURIComponent`.
+
+## Padrões do projeto
+- Estilização só com Tailwind + tokens do design system (sem CSS mágico/cores hex soltas).
+- Acessibilidade e responsividade mobile-first são requisitos, não opcionais.
+- Antes de finalizar: sem erros de lint/type e build passando.
