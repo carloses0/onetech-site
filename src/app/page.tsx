@@ -125,14 +125,14 @@ export default function HomePage() {
               Atendemos em {site.city} e região
             </h2>
             <p className="mt-2 text-slate-500">
-              Implantação a partir de R$ 297 e planos mensais sem fidelidade.
+              Cada projeto é montado sob medida, de acordo com a sua necessidade.
             </p>
           </div>
           <Link
-            href="/planos"
+            href="/orcamento"
             className="inline-flex items-center gap-2 font-medium text-brand hover:text-brand-600"
           >
-            Ver planos e preços
+            Solicitar orçamento
             <ArrowRight className="h-5 w-5" aria-hidden="true" />
           </Link>
         </div>

@@ -14,6 +14,6 @@ export const whatsappMessages = {
   geral: "Olá! Vim pelo site da OneTech e gostaria de saber mais sobre o Vitrine Pro.",
   demo: "Olá! Gostaria de agendar uma demonstração do Vitrine Pro.",
   duvida: "Olá! Tenho uma dúvida sobre o Vitrine Pro.",
-  plano: (plano: string) =>
-    `Olá! Tenho interesse no plano ${plano} do Vitrine Pro. Pode me ajudar?`,
+  orcamento:
+    "Olá! Gostaria de solicitar um orçamento sob medida para o meu comércio.",
 } as const;

@@ -18,7 +18,7 @@ export interface FaqItem {
 }
 
 export const demoStore: DemoStore = {
-  nome: "Sanduba do Zé",
+  nome: "Sanduícheria tech",
   subtitulo: "Lanches e porções",
   status: "online",
   horario: "Seg a Sáb, 11h às 22h",

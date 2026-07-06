@@ -28,8 +28,8 @@ export function CtaSection({
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <WhatsappButton message={message} label="Falar com a OneTech" size="lg" />
-          <Button href="/planos" variant="secondary" size="lg">
-            Ver planos
+          <Button href="/orcamento" variant="secondary" size="lg">
+            Solicitar orçamento
           </Button>
         </div>
       </div>

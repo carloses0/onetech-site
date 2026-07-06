@@ -17,7 +17,7 @@ export const site = {
 export const nav = [
   { href: "/", label: "Início" },
   { href: "/vitrine-pro", label: "Vitrine Pro" },
-  { href: "/planos", label: "Planos" },
+  { href: "/orcamento", label: "Orçamento" },
   { href: "/sobre", label: "Sobre" },
   { href: "/contato", label: "Contato" },
 ] as const;
