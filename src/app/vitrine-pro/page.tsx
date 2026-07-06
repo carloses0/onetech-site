@@ -22,7 +22,7 @@ const comparativo = [
   { recurso: "Chatbot de atendimento", tradicional: false, vitrine: true },
   { recurso: "Relatório de visitas e buscas", tradicional: false, vitrine: true },
   { recurso: "Integração com Google", tradicional: false, vitrine: true },
-  { recurso: "Precisa de equipe técnica", tradicional: true, vitrine: false },
+  { recurso: "Promoções atualizadas periodicamente", tradicional: false, vitrine: true },
 ];
 
 const productJsonLd = {
@@ -32,13 +32,6 @@ const productJsonLd = {
   brand: { "@type": "Brand", name: site.name },
   description:
     "Plataforma digital para pequenos comércios: catálogo digital, atendimento por WhatsApp, pedidos e reservas e presença no Google.",
-  offers: {
-    "@type": "AggregateOffer",
-    priceCurrency: "BRL",
-    lowPrice: "197",
-    highPrice: "447",
-    offerCount: "3",
-  },
 };
 
 export default function VitrineProPage() {
@@ -61,8 +54,8 @@ export default function VitrineProPage() {
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <WhatsappButton message={whatsappMessages.demo} label="Agendar demonstração" size="lg" />
-            <Button href="/planos" variant="secondary" size="lg">
-              Ver planos
+            <Button href="/orcamento" variant="secondary" size="lg">
+              Solicitar orçamento
             </Button>
           </div>
         </div>
@@ -194,8 +187,8 @@ export default function VitrineProPage() {
           ))}
         </ul>
         <div className="mt-10 text-center">
-          <Button href="/planos" variant="primary" size="lg">
-            Ver planos e preços
+          <Button href="/orcamento" variant="primary" size="lg">
+            Solicitar orçamento
             <ArrowRight className="h-5 w-5" aria-hidden="true" />
           </Button>
         </div>
