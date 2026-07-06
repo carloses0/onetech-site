@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState, type ReactNode } from "react";
+import { FormEvent, useEffect, useRef, useState, type ReactNode } from "react";
 import {
   ArrowLeft,
   MoreVertical,
@@ -51,6 +51,14 @@ export function WhatsappChatDemo({
   const isCompact = variant === "compact";
   const initial = demoStore.nome.charAt(0).toUpperCase();
 
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
+  }, [messages, isTyping, quickReplies]);
+
   return (
     <div
       className={cn(
@@ -60,12 +68,17 @@ export function WhatsappChatDemo({
       )}
       aria-label={`Demonstração do chatbot WhatsApp da ${demoStore.nome}`}
     >
-      <div className="relative overflow-hidden rounded-[2.25rem] bg-bg-soft">
+      <div
+        className={cn(
+          "relative flex flex-col overflow-hidden rounded-[2.25rem] bg-bg-soft",
+          isCompact ? "h-[520px]" : "h-[600px]",
+        )}
+      >
         {/* Dynamic island */}
         <div className="pointer-events-none absolute left-1/2 top-2 z-20 h-6 w-24 -translate-x-1/2 rounded-full bg-slate-950" />
 
         {/* Status bar */}
-        <div className="flex items-center justify-between bg-[#075E54] px-5 pb-1 pt-2.5 text-[11px] font-semibold leading-none text-white/90">
+        <div className="flex shrink-0 items-center justify-between bg-[#075E54] px-5 pb-1 pt-2.5 text-[11px] font-semibold leading-none text-white/90">
           <span className="leading-none">9:41</span>
           <span className="flex items-center gap-1">
             <SignalHigh className="h-3.5 w-3.5" aria-hidden="true" />
@@ -75,7 +88,7 @@ export function WhatsappChatDemo({
         </div>
 
         {/* WhatsApp header */}
-        <header className="flex items-center gap-2.5 bg-[#075E54] px-3 py-2.5 text-white">
+        <header className="flex shrink-0 items-center gap-2.5 bg-[#075E54] px-3 py-2.5 text-white">
           <ArrowLeft className="h-5 w-5 shrink-0 text-white/80" aria-hidden="true" />
           <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/20 text-sm font-bold text-white">
             {initial}
@@ -94,9 +107,10 @@ export function WhatsappChatDemo({
           </div>
         </header>
 
-        {/* Messages — fluem naturalmente, sem scroll interno */}
+        {/* Messages — altura fixa com scroll vertical */}
         <div
-          className="bg-[#ECE5DD] bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2240%22%20height%3D%2240%22%3E%3Cpath%20d%3D%22M0%2020h40M20%200v40%22%20stroke%3D%22%23000%22%20stroke-opacity%3D%220.02%22%2F%3E%3C%2Fsvg%3E')] px-3 py-4"
+          ref={scrollRef}
+          className="flex-1 min-h-0 overflow-y-auto bg-[#ECE5DD] bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2240%22%20height%3D%2240%22%3E%3Cpath%20d%3D%22M0%2020h40M20%200v40%22%20stroke%3D%22%23000%22%20stroke-opacity%3D%220.02%22%2F%3E%3C%2Fsvg%3E')] px-3 py-4"
           role="log"
           aria-live="polite"
           aria-relevant="additions"
@@ -159,7 +173,7 @@ export function WhatsappChatDemo({
         </div>
 
         {quickReplies.length > 0 && (
-          <div className="border-t border-slate-200 bg-[#ECE5DD] px-3 py-2">
+          <div className="shrink-0 border-t border-slate-200 bg-[#ECE5DD] px-3 py-2">
             <div
               className="flex flex-wrap gap-2"
               role="group"
@@ -181,7 +195,7 @@ export function WhatsappChatDemo({
 
         <form
           onSubmit={onSubmit}
-          className="flex items-center gap-2 bg-[#ECE5DD] px-3 pb-3 pt-2"
+          className="flex shrink-0 items-center gap-2 bg-[#ECE5DD] px-3 pb-3 pt-2"
         >
           <div className="flex min-w-0 flex-1 items-center gap-2 rounded-full bg-white px-3 py-1.5 shadow-soft">
             <Smile className="h-5 w-5 shrink-0 text-slate-400" aria-hidden="true" />
