@@ -44,15 +44,15 @@ export function Footer() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-white"
             >
-              <MessageCircle className="h-4 w-4" aria-hidden="true" />
+              <MessageCircle className="h-4 w-4 shrink-0" aria-hidden="true" />
               {site.whatsappDisplay}
             </a>
             <a
               href={`mailto:${site.email}`}
               className="flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-white"
             >
-              <Mail className="h-4 w-4" aria-hidden="true" />
-              {site.email}
+              <Mail className="h-4 w-4 shrink-0" aria-hidden="true" />
+              <span className="break-all">{site.email}</span>
             </a>
             <p className="flex items-center gap-2 text-sm text-slate-400">
               <MapPin className="h-4 w-4" aria-hidden="true" />

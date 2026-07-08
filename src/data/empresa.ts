@@ -56,7 +56,7 @@ export type Fundador = {
 export const fundadores: Fundador[] = [
   {
     nome: "Brenno Alencar",
-    cargo: "CEO & Co-founder",
+    cargo: "CTO & Co-founder",
     foto: "/fundadores/brenno.png",
     descricao:
       "Mais de 10 anos ajudando pequenos negócios a vender mais com tecnologia simples.",
@@ -78,14 +78,13 @@ export const fundadores: Fundador[] = [
   },
   {
     nome: "Kaio Alencar",
-    cargo: "CEO & Co-founder",
+    cargo: "CFO & Co-founder",
     foto: "/fundadores/kaio.jpeg",
     descricao:
       "Lidera o desenvolvimento do Vitrine Pro, focada em produtos fáceis de usar.",
     redes: {
       instagram: "https://instagram.com/kaio__alencar",
-      linkedin: "https://linkedin.com/in/pedroalves",
-      whatsapp: "5562991713172", 
+      whatsapp: "5562991713172",
     },
   },
 ];

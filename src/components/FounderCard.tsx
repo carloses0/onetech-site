@@ -49,7 +49,7 @@ export function FounderCard({
       </div>
 
       <div className="p-5">
-        <div className="mb-4 h-1 w-8 rounded-full bg-brand-500" />
+        <div className="mb-3 h-0.5 w-8 rounded-full bg-brand-500" />
 
         <p className="text-sm leading-relaxed text-slate-500">
           {descricao}
