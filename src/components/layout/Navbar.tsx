@@ -1,21 +1,43 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { Logo } from "@/components/Logo";
 import { WhatsappButton } from "@/components/WhatsappButton";
+import { useScrollDirection } from "@/hooks/useScrollDirection";
 import { whatsappMessages } from "@/lib/whatsapp";
 import { nav, site } from "@/lib/site";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
   const pathname = usePathname();
+  const { isNavbarHidden } = useScrollDirection();
+
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReducedMotion(media.matches);
+
+    const onChange = (event: MediaQueryListEvent) => {
+      setReducedMotion(event.matches);
+    };
+
+    media.addEventListener("change", onChange);
+    return () => media.removeEventListener("change", onChange);
+  }, []);
+
+  const hidden = isNavbarHidden && !open && !reducedMotion;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-md">
+    <header
+      className={cn(
+        "sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-md transition-transform duration-300 ease-in-out",
+        hidden ? "-translate-y-full" : "translate-y-0",
+      )}
+    >
       <nav
         aria-label="Principal"
         className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 md:px-6 lg:px-8"

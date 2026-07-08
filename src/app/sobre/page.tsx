@@ -70,6 +70,7 @@ export default function SobrePage() {
               cargo={f.cargo}
               foto={f.foto}
               descricao={f.descricao}
+              redes={f.redes}
             />
           ))}
         </div>
