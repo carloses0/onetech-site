@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Section } from "@/components/ui/Section";
 import { FeatureItem } from "@/components/FeatureItem";
 import { CtaSection } from "@/components/sections/CtaSection";
-import { valores, sobre } from "@/data/empresa";
+import { FounderCard } from "@/components/FounderCard";
+import { valores, sobre, fundadores } from "@/data/empresa";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -49,6 +50,26 @@ export default function SobrePage() {
               icon={valor.icon}
               titulo={valor.titulo}
               descricao={valor.descricao}
+            />
+          ))}
+        </div>
+      </Section>
+
+      <Section soft ariaLabelledby="fundadores-title">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-overline">Quem está por trás</p>
+          <h2 id="fundadores-title" className="mt-3 text-3xl font-bold text-slate-900 md:text-4xl">
+            Nossos fundadores
+          </h2>
+        </div>
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {fundadores.map((f) => (
+            <FounderCard
+              key={f.nome}
+              nome={f.nome}
+              cargo={f.cargo}
+              foto={f.foto}
+              descricao={f.descricao}
             />
           ))}
         </div>

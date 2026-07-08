@@ -40,3 +40,52 @@ export const sobre = {
   texto:
     "A OneTech Solutions nasceu para resolver um problema real: lojas com produto bom, mas presença digital fraca. Em vez de um site estático e difícil de mexer, entregamos uma solução viva — o Vitrine Pro — que o lojista atualiza pelo celular, recebe pedidos no WhatsApp e acompanha quantas pessoas visitaram a loja naquele dia.",
 };
+
+export type Fundador = {
+  nome: string;
+  cargo: string;
+  foto: string;
+  descricao: string;
+  redes?: {
+    instagram?: string;
+    linkedin?: string;
+    whatsapp?: string; 
+  };
+};
+
+export const fundadores: Fundador[] = [
+  {
+    nome: "Brenno Alencar",
+    cargo: "CEO & Co-founder",
+    foto: "/fundadores/brenno.png",
+    descricao:
+      "Mais de 10 anos ajudando pequenos negócios a vender mais com tecnologia simples.",
+    redes: {
+      instagram: "https://instagram.com/brenno_alencaar",
+      linkedin: "https://www.linkedin.com/in/brenno-alencar-955460256/",
+    },
+  },
+  {
+    nome: "Carlos Eduardo",
+    cargo: "CEO & Co-founder",
+    foto: "/fundadores/carlos.png",
+    descricao:
+      "Lidera o desenvolvimento do Vitrine Pro, focada em produtos fáceis de usar.",
+    redes: {
+      instagram: "https://instagram.com/carlos.sousaes0",
+      linkedin: "https://www.linkedin.com/in/carlos-eduardo-s-11948a178/",
+    },
+  },
+  {
+    nome: "Kaio Alencar",
+    cargo: "CEO & Co-founder",
+    foto: "/fundadores/kaio.jpeg",
+    descricao:
+      "Lidera o desenvolvimento do Vitrine Pro, focada em produtos fáceis de usar.",
+    redes: {
+      instagram: "https://instagram.com/kaio__alencar",
+      linkedin: "https://linkedin.com/in/pedroalves",
+      whatsapp: "5562991713172", 
+    },
+  },
+];
