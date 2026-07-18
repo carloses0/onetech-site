@@ -24,7 +24,7 @@ export function Logo({ className, variant = "default" }: LogoProps) {
         className,
       )}
     >
-      <Image
+      {/* <Image
         src="/logo-ring.png"
         alt=""
         aria-hidden="true"
@@ -32,7 +32,7 @@ export function Logo({ className, variant = "default" }: LogoProps) {
         height={328}
         priority
         className="h-11 w-auto md:h-12"
-      />
+      /> */}
       <Image
         src="/logo-word.png"
         alt={site.name}

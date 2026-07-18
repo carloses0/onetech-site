@@ -7,13 +7,13 @@ import { whatsappUrl, whatsappMessages } from "@/lib/whatsapp";
 
 export function Footer() {
   const year = new Date().getFullYear();
-
+  
   return (
     <footer className="bg-slate-900 text-slate-300">
       <Container className="py-14">
         <div className="grid gap-10 md:grid-cols-3">
           <div className="flex flex-col gap-4">
-            <Logo variant="light" />
+            <Logo />
             <p className="max-w-xs text-sm leading-relaxed text-slate-400">
               {site.description}
             </p>

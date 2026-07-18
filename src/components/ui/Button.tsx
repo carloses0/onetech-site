@@ -10,12 +10,12 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-brand text-white shadow-brand hover:bg-brand-600 focus-visible:ring-brand-300",
+    "bg-brand text-white shadow-md hover:shadow-lg hover:bg-brand-600 focus-visible:ring-brand-300",
   secondary:
     "border border-slate-200 bg-white text-slate-700 hover:border-brand-200 hover:text-brand focus-visible:ring-brand-200",
   ghost: "text-slate-700 hover:bg-slate-100 focus-visible:ring-slate-300",
   whatsapp:
-    "bg-whatsapp text-white shadow-soft hover:bg-whatsapp-hover focus-visible:ring-green-300",
+    "bg-whatsapp text-white shadow-md hover:shadow-lg hover:bg-whatsapp-hover focus-visible:ring-green-300",
 };
 
 const sizes: Record<Size, string> = {
@@ -47,7 +47,13 @@ interface ButtonAsLink extends CommonProps {
 type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 export function Button(props: ButtonProps) {
-  const { variant = "primary", size = "md", className, children, ariaLabel } = props;
+  const {
+    variant = "primary",
+    size = "md",
+    className,
+    children,
+    ariaLabel,
+  } = props;
   const classes = cn(base, variants[variant], sizes[size], className);
 
   if ("href" in props && props.href) {
