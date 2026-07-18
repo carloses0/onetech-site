@@ -38,9 +38,7 @@ export function FounderCard({
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
         <div className="absolute inset-x-0 bottom-0 p-4">
-          <h3 className="text-base font-bold text-white">
-            {nome}
-          </h3>
+          <h3 className="text-base font-bold text-white">{nome}</h3>
 
           <p className="text-xs font-semibold uppercase tracking-wide text-white/80">
             {cargo}
@@ -51,9 +49,7 @@ export function FounderCard({
       <div className="p-5">
         <div className="mb-3 h-0.5 w-8 rounded-full bg-brand-500" />
 
-        <p className="text-sm leading-relaxed text-slate-500">
-          {descricao}
-        </p>
+        <p className="text-sm leading-relaxed text-slate-500">{descricao}</p>
 
         {redes && (
           <div className="mt-4 flex items-center gap-3 border-t border-slate-100 pt-4">

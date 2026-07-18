@@ -31,7 +31,7 @@ npm run lint    # checagem do ESLint
 
 ```
 src/
-  app/                # rotas (App Router): /, /vitrine-pro, /planos, /sobre, /contato
+  app/                # rotas (App Router): /, /vitrine-pro, /planos, /sobre, /apps
     layout.tsx        # layout raiz: fontes, metadata, JSON-LD, Navbar/Footer
     globals.css       # estilos base + tokens
     sitemap.ts        # sitemap dinâmico

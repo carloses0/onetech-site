@@ -19,5 +19,5 @@ export const nav = [
   { href: "/vitrine-pro", label: "Vitrine Pro" },
   { href: "/orcamento", label: "Orçamento" },
   { href: "/sobre", label: "Sobre" },
-  { href: "/contato", label: "Contato" },
+  { href: "/apps", label: "Apps" },
 ] as const;

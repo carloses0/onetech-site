@@ -11,9 +11,11 @@ export function whatsappUrl(message?: string): string {
 }
 
 export const whatsappMessages = {
-  geral: "Olá! Vim pelo site da OneTech e gostaria de saber mais sobre o Vitrine Pro.",
+  geral:
+    "Olá! Vim pelo site da OneTech e gostaria de saber mais sobre o Vitrine Pro.",
   demo: "Olá! Gostaria de agendar uma demonstração do Vitrine Pro.",
   duvida: "Olá! Tenho uma dúvida sobre o Vitrine Pro.",
   orcamento:
-    "Olá! Gostaria de solicitar um orçamento sob medida para o meu comércio.",
+    "Olá! Gostaria de solicitar um orçamento sob medida para o meu negócio.",
+  apps: "Olá! Vi o site da OneTech e gostaria de saber mais sobre o desenvolvimento de aplicativos.",
 } as const;
